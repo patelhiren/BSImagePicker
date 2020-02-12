@@ -28,6 +28,7 @@ protocol AssetsViewControllerDelegate: class {
     func assetsViewController(_ assetsViewController: AssetsViewController, didDeselectAsset asset: PHAsset)
     func assetsViewController(_ assetsViewController: AssetsViewController, didLongPressCell cell: AssetCollectionViewCell, displayingAsset asset: PHAsset)
     func shouldSelect(in assetsViewController: AssetsViewController) -> Bool
+    func reloaded()
 }
 
 class AssetsViewController: UIViewController {
@@ -91,6 +92,7 @@ class AssetsViewController: UIViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.fetchResult = fetchResult
                 self?.collectionView.reloadData()
+                self?.delegate?.reloaded()
             }
         }
     }
@@ -200,6 +202,7 @@ extension AssetsViewController: PHPhotoLibraryChangeObserver {
             } else {
                 self.fetchResult = changes.fetchResultAfterChanges
                 self.collectionView.reloadData()
+                self.delegate?.reloaded()
             }
         }
     }

@@ -48,4 +48,10 @@ extension ImagePickerController: AssetsViewControllerDelegate {
     func shouldSelect(in assetsViewController: AssetsViewController) -> Bool {
         return assetStore.count < settings.selection.max
     }
+    
+    func reloaded() {
+        DispatchQueue.main.async {
+            self.assetsViewController.syncSelections(in: self.assetStore)
+        }
+    }
 }
