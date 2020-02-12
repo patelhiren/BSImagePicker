@@ -28,11 +28,11 @@ class PreviewTitleBuilder {
     // TODO: Move to settings/theme
     private static let titleAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
-        NSAttributedString.Key.foregroundColor: UIColor.black
+        NSAttributedString.Key.foregroundColor: UIColor.white
     ]
     private static let subtitleAttributes: [NSAttributedString.Key: Any] = [
         NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
-        NSAttributedString.Key.foregroundColor: UIColor.black
+        NSAttributedString.Key.foregroundColor: UIColor.white
     ]
     
     static func titleFor(asset: PHAsset, completion: @escaping (NSAttributedString) -> Void) {
