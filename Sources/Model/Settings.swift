@@ -40,6 +40,15 @@ public class Settings {
         
         /// Shadow color for the circle
         public lazy var selectionShadowColor: UIColor = .black
+        
+        /// Album text color
+        public lazy var albumTextColor: UIColor = .black
+        
+        /// Preview title text color
+        public lazy var previewTitleTextColor: UIColor = .black
+        
+        /// Preview subtitle text color
+        public lazy var previewSubtitleTextColor: UIColor = .black
     }
 
     public class Selection {
