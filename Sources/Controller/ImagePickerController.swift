@@ -24,7 +24,7 @@ import UIKit
 import Photos
 
 
-fileprivate let localizedDone = Bundle(identifier: "com.apple.UIKit")?.localizedString(forKey: "Done", value: "Done", table: "") ?? "Done"
+fileprivate let localizedDone = Bundle.main.localizedString(forKey: "DoneButtonTitle", value: "Done", table: "BSImagePicker") 
 
 // MARK: ImagePickerController
 public class ImagePickerController: UINavigationController {
